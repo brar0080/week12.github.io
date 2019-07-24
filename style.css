@@ -1,0 +1,124 @@
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0px 0px 10px 3px rgba(255, 0, 0, 0.4),
+            0 0 0 8px #D6D5DB,
+            0 0 0 18px #96989E;
+    }
+
+
+    25%,
+    75% {
+        box-shadow:
+            0px 0px 10px 8px rgba(255, 0, 0, 0.8),
+            0 0 0 8px #D6D5DB,
+            0 0 0 18px #96989E;
+        transform:
+    }
+
+    35%,
+    45% {
+        transform: translate(30px);
+    }
+
+}
+
+@keyframes shrink {
+
+    0%,
+    100% {
+        background-image: radial-gradient(ellipse at center, #ff0505 10%, #960910 85%, #960910 85%);
+    }
+
+    10%,
+    90% {
+        background-image: radial-gradient(ellipse at center, #ff0505 20%, #960910 85%, #960910 85%);
+    }
+
+    20%,
+    80% {
+        background-image: radial-gradient(ellipse at center, #ff0505 30%, #960910 85%, #960910 85%);
+    }
+
+    30%,
+    70% {
+        background-image: radial-gradient(ellipse at center, #ff0505 40%, #960910 85%, #960910 85%);
+    }
+
+    40%,
+    60% {
+        background-image: radial-gradient(ellipse at center, #ff0505 50%, #960910 85%, #960910 85%);
+    }
+
+    50% {
+        background-image: radial-gradient(ellipse at center, #ff0505 60%, #960910 85%, #960910 85%);
+    }
+
+}
+
+@keyframes implode {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    20%,
+    40% {
+        opacity: 0.3;
+        transform: scale(0.5);
+    }
+
+    60%,
+    80% {
+        opacity: 0.5;
+        transform: scale(0.3);
+    }
+
+    80% {
+        transform: scale(0.5);
+        opacity: .5;
+        background: transparent;
+        /* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9); */
+    }
+
+    100% {
+        transform: scale(10);
+        opacity: .8;
+        background: rgba;
+        /* box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.0); */
+    }
+
+}
+
+.doomsday {
+    animation: pulse 4s ease 0s infinite running;
+    opacity: 0.8;
+    transition-timing-function: ease-in-out;
+    transform: translate(0, -150px);
+    transition: 4s;
+
+
+}
+
+.doomsday:hover {
+    opacity: 1;
+    transform: translate(0, 150px);
+    transition: 1;
+    transform: scale(.5);
+    transition: 1s;
+
+}
+
+.doomsday:active {
+    transform: translate(-100px, 0px);
+    transition: 3s;
+    animation-name: implode;
+    transition-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-fill-mode: backwards, forwards;
+
+}
